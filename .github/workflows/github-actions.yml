@@ -1,0 +1,7 @@
+name: linter-check
+on: push
+jobs:
+    runs-on: 
+    steps:
+      - name: linter-check-step
+        run: make lint
