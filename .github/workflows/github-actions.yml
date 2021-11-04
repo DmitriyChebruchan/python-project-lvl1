@@ -4,7 +4,7 @@ jobs:
   linter-check:
     runs-on: ubuntu-latest 
     steps:
-      - name: install-poetry
-	run: pip install poetry
-      - name: linter-check
-        run: make lint
+	name: linter-check
+        run: 
+		pip install poetry 
+		make lint
