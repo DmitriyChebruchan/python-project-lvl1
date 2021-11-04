@@ -1,3 +1,8 @@
+push:
+	git add .
+	git commit -m 'autocommit'
+	git push
+
 check:
 	poetry check
 
