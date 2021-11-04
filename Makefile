@@ -1,3 +1,6 @@
+check:
+	poetry check
+
 build:
 	poetry build
 
