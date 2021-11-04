@@ -19,7 +19,6 @@ package-install:
 	python3 -m pip install --user dist/*.whl
 
 lint:
-	pip install poetry
 	poetry run flake8 brain_games
 
 brain-games:
