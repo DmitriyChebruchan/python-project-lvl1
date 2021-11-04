@@ -2,7 +2,7 @@ name: linter-check
 on: push
 jobs:
   linter-check:
-    runs-on: 
+    runs-on: macos-latest 
     steps:
       - name: linter-check
         run: make lint
