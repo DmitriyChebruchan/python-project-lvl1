@@ -33,19 +33,10 @@ def result_checker(first_number, second_number, operator):
     return str(result)
 
 
-rule = 'What is the result of the expression?'
-
-first_rand_int = randint(1, 100)
-second_rand_int = randint(1, 100)
-
-operator = operator_generator()
-question = str(first_rand_int) + operator + str(second_rand_int)
-correct_answer = result_checker(first_rand_int, second_rand_int, operator)
-
-
-def main():
+def game():
 
     name = welcome_user()
+    rule = 'What is the result of the expression?'
     rules(rule)
 
     i = 0
@@ -67,6 +58,10 @@ def main():
             i = 0
 
     print('Congratulations, ' + name + '!')
+
+
+def main():
+    game()
 
 
 if __name__ == '__main__':
