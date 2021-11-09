@@ -16,7 +16,7 @@ install:
 	poetry install
 
 package-install:
-	python3 -m pip install --user dist/*.whl
+	python3 -m pip install --user --force-reinstall dist/*.whl
 
 lint:
 	poetry run flake8 brain_games
@@ -26,3 +26,9 @@ brain-games:
 
 brain-even:
 	@poetry run brain-even
+
+update-p:
+	poetry build
+	make install
+	make publish
+	make package-install	
