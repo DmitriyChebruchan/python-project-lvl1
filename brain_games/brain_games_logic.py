@@ -40,7 +40,7 @@ Let\'s try again, " + name + "!"
     print(responce)
 
 
-def game_cycle(rule, question, correct_answer, name):
+def game_cycle(question, correct_answer, name):
 
     user_answer = answer_puller(question)
     correctness_of_user_answer = answer_checker(correct_answer, user_answer)

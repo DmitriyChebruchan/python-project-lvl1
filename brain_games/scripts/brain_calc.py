@@ -49,7 +49,7 @@ def game():
 
         correct_answer = result_checker(first_rand_int,
                                         second_rand_int, operator)
-        correctness_of_user_answer = game_cycle(rule, question,
+        correctness_of_user_answer = game_cycle(question,
                                                 correct_answer, name)
 
         if (correctness_of_user_answer):

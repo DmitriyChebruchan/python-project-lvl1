@@ -35,7 +35,7 @@ def game():
         question = str(first_rand_int) + ' ' + str(second_rand_int)
         correct_answer = result_checker(first_rand_int,
                                         second_rand_int)
-        correctness_of_user_answer = game_cycle(rule, question,
+        correctness_of_user_answer = game_cycle(question,
                                                 correct_answer, name)
 
         if (correctness_of_user_answer):
