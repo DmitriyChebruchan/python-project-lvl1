@@ -9,8 +9,8 @@ def welcome_user():
     return name
 
 
-def rules(rules):
-    print(rules)
+def rules(rule):
+    print(rule)
 
 
 def answer_puller(generated_question):
@@ -19,8 +19,7 @@ def answer_puller(generated_question):
     return answer
 
 
-def answer_checker(user_answer, correct_answer):
-
+def answer_checker(correct_answer, user_answer):
     if user_answer == correct_answer:
         return True
     else:
@@ -35,27 +34,17 @@ def response_generator(corretness_of_user_answer, correct_answer,
     if (corretness_of_user_answer):
         responce = 'Correct!'
     else:
-        responce = "'" + user_answer + "' is wrong answer;(\
-.Correct answer was '" + correct_answer + "'\n\
+        responce = "'" + str(user_answer) + "' is wrong answer;(\
+.Correct answer was '" + str(correct_answer) + "'\n\
 Let\'s try again, " + name + "!"
     print(responce)
 
 
-def game_cycle(rules, generated_question, correct_answer):
+def game_cycle(rule, question, correct_answer, name):
 
-    name = welcome_user()
-    rules(rules)
+    user_answer = answer_puller(question)
+    correctness_of_user_answer = answer_checker(correct_answer, user_answer)
+    response_generator(correctness_of_user_answer,
+                       correct_answer, user_answer, name)
 
-    i = 0
-    while (i < 3):
-
-        user_answer = answer_puller(generated_question)
-        correctness_of_user_answer = answer_checker(correct_answer, user_answer)
-        response_generator(correctness_of_user_answer,
-                           correct_answer, user_answer, name)
-
-        if (correctness_of_user_answer):
-            i = i + 1
-        else:
-            i = 0
-    print('Congratulations, ' + name + '!')
+    return correctness_of_user_answer
