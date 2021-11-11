@@ -45,7 +45,8 @@ def game():
         second_rand_int = randint(1, 100)
 
         operator = operator_generator()
-        question = str(first_rand_int) + ' ' + operator + ' ' + str(second_rand_int)
+        question = str(first_rand_int) + ' ' + operator + ' ' + \
+            str(second_rand_int)
 
         correct_answer = result_checker(first_rand_int,
                                         second_rand_int, operator)
