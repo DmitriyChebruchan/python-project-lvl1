@@ -31,4 +31,8 @@ update-p:
 	poetry build
 	make install
 	make publish
-	make package-install	
+	make package-install
+
+u-p:
+	make update-p
+	make push
