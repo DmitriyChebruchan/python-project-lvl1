@@ -81,8 +81,10 @@ def game_cycle():
         if (correctness_of_user_answer):
             i = i + 1
         else:
-            i = 0
-    print('Congratulations, ' + name + '!')
+            return
+
+        if i == 3:
+            print('Congratulations, ' + name + '!')
 
 
 def main():

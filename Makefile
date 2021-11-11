@@ -10,7 +10,7 @@ build:
 	poetry build
 
 publish:
-	poetry publish --dry-run	
+	poetry publish --dry-run -u '\n' -p '\n'	
 
 install:
 	poetry install

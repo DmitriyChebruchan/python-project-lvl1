@@ -36,7 +36,7 @@ def game():
         if (correctness_of_user_answer):
             i = i + 1
         else:
-            i = 0
+            return
 
     print('Congratulations, ' + name + '!')
 
