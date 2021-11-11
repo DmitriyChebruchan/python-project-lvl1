@@ -59,7 +59,7 @@ def response_generator(corretness_of_user_answer, correct_answer,
         correct_y_n = correct_answer
 
     responce = "'" + user_answer + "' is wrong answer;(\
-.Correct answer was '" + correct_y_n + "'\nLet\'s try again, " + name + "!"
+. Correct answer was '" + correct_y_n + "'\nLet\'s try again, " + name + "!"
     print(responce)
 
 
