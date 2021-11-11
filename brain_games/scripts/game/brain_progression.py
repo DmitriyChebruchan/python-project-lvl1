@@ -6,7 +6,7 @@ from brain_games.brain_games_logic import game_cycle, welcome_user, rules
 
 def result_checker(first_int, total_quantity, missing_int, step):
 
-    if missing_int == 1:
+    if missing_int == 0:
         result = first_int
     else:
         result = first_int + missing_int * step
